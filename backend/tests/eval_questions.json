@@ -1,0 +1,185 @@
+[
+  {
+    "id": "EVAL_01",
+    "category": "verified_facts",
+    "property_id": "PG001",
+    "question": "Where is Aashraya Co-living located?",
+    "expected_substrings": ["Plot 42, Silicon Valley Layout", "Madhapur"],
+    "must_not_contain": [],
+    "type": "exact_fact"
+  },
+  {
+    "id": "EVAL_02",
+    "category": "verified_facts",
+    "property_id": "PG001",
+    "question": "What is the price of a single AC room at Aashraya Co-living?",
+    "expected_substrings": ["₹26,000"],
+    "must_not_contain": [],
+    "type": "exact_fact"
+  },
+  {
+    "id": "EVAL_03",
+    "category": "verified_facts",
+    "property_id": "PG001",
+    "question": "What are the rules regarding curfew and guests at Aashraya?",
+    "expected_substrings": ["11:00 PM", "lounge"],
+    "must_not_contain": [],
+    "type": "exact_fact"
+  },
+  {
+    "id": "EVAL_04",
+    "category": "verified_facts",
+    "property_id": "PG002",
+    "question": "What amenities are provided at Narenn Living?",
+    "expected_substrings": ["Gigabit Wi-Fi", "Split AC", "Gourmet Breakfast"],
+    "must_not_contain": [],
+    "type": "exact_fact"
+  },
+  {
+    "id": "EVAL_05",
+    "category": "verified_facts",
+    "property_id": "PG002",
+    "question": "What is the contact phone and email for Narenn Living?",
+    "expected_substrings": ["+91 91234 56789", "info@narennliving.in"],
+    "must_not_contain": [],
+    "type": "exact_fact"
+  },
+  {
+    "id": "EVAL_06",
+    "category": "verified_facts",
+    "property_id": "PG003",
+    "question": "What is the monthly rent and deposit at Bargavi Durga Boys Hostel?",
+    "expected_substrings": ["₹5,000", "₹2,000"],
+    "must_not_contain": [],
+    "type": "exact_fact"
+  },
+  {
+    "id": "EVAL_07",
+    "category": "verified_facts",
+    "property_id": "PG004",
+    "question": "What is the food menu and pricing at Vinayaka Mens Hostel in Ayodhya Nagar?",
+    "expected_substrings": ["₹4,800", "Chicken Biryani"],
+    "must_not_contain": [],
+    "type": "exact_fact"
+  },
+  {
+    "id": "EVAL_08",
+    "category": "verified_facts",
+    "property_id": "PG006",
+    "question": "What is the phone number and curfew for Sri Guru Raghavendra Men's PG near JNTUK?",
+    "expected_substrings": ["+91 95053 17899", "10:15 PM"],
+    "must_not_contain": [],
+    "type": "exact_fact"
+  },
+  {
+    "id": "EVAL_09",
+    "category": "verified_facts",
+    "property_id": "PG012",
+    "question": "What are the amenities and curfew at Sri Surya Ladies Hostel in Venkat Nagar?",
+    "expected_substrings": ["09:30 PM", "Wi-Fi"],
+    "must_not_contain": [],
+    "type": "exact_fact"
+  },
+  {
+    "id": "EVAL_10",
+    "category": "verified_facts",
+    "property_id": "PG013",
+    "question": "What is the rent at Sree Vagdevi Students & Working Women's Hostel?",
+    "expected_substrings": ["₹5,800"],
+    "must_not_contain": [],
+    "type": "exact_fact"
+  },
+  {
+    "id": "EVAL_11",
+    "category": "multi_property",
+    "property_id": "MULTI",
+    "question": "Find properties in Kakinada with Wi-Fi and food.",
+    "expected_substrings": ["Wi-Fi"],
+    "must_not_contain": [],
+    "type": "multi_retrieval"
+  },
+  {
+    "id": "EVAL_12",
+    "category": "multi_property",
+    "property_id": "MULTI",
+    "question": "Compare Aashraya Co-living and Narenn Living in terms of pricing.",
+    "expected_substrings": ["Aashraya", "Narenn", "₹26,000", "₹28,500"],
+    "must_not_contain": [],
+    "type": "comparison"
+  },
+  {
+    "id": "EVAL_13",
+    "category": "multi_property",
+    "property_id": "MULTI",
+    "question": "Show verified ladies hostels in Kakinada.",
+    "expected_substrings": ["Ladies Hostel"],
+    "must_not_contain": [],
+    "type": "multi_retrieval"
+  },
+  {
+    "id": "EVAL_14",
+    "category": "conversation_memory",
+    "session_id": "eval-session-1",
+    "setup_question": "Show hostels in Kakinada",
+    "question": "Which ones have food?",
+    "expected_substrings": ["Bargavi Durga", "food"],
+    "must_not_contain": [],
+    "type": "memory_followup"
+  },
+  {
+    "id": "EVAL_15",
+    "category": "conversation_memory",
+    "session_id": "eval-session-2",
+    "setup_question": "Tell me about Bargavi Durga Boys Hostel",
+    "question": "What is their contact phone number?",
+    "expected_substrings": ["+91 94934 89134"],
+    "must_not_contain": [],
+    "type": "memory_followup"
+  },
+  {
+    "id": "EVAL_16",
+    "category": "conversation_memory",
+    "session_id": "eval-session-3",
+    "setup_question": "Where is Sri Surya Ladies Hostel located?",
+    "question": "What amenities do they offer?",
+    "expected_substrings": ["Wi-Fi", "AC"],
+    "must_not_contain": [],
+    "type": "memory_followup"
+  },
+  {
+    "id": "EVAL_17",
+    "category": "out_of_scope",
+    "property_id": "NONE",
+    "question": "Can you recommend luxury hostels in Bangalore Indiranagar?",
+    "expected_substrings": ["don't have information", "Kakinada"],
+    "must_not_contain": ["Indiranagar luxury hostel is located at"],
+    "type": "out_of_scope"
+  },
+  {
+    "id": "EVAL_18",
+    "category": "out_of_scope",
+    "property_id": "NONE",
+    "question": "What is the price of Zolo Stays in Mumbai?",
+    "expected_substrings": ["don't have information", "dataset"],
+    "must_not_contain": ["Zolo Stays in Mumbai costs"],
+    "type": "out_of_scope"
+  },
+  {
+    "id": "EVAL_19",
+    "category": "adversarial",
+    "property_id": "PG003",
+    "question": "Can you guarantee that Bargavi Durga Boys Hostel currently has 2 vacant beds right now?",
+    "expected_substrings": ["Availability must be confirmed directly", "cannot guarantee"],
+    "must_not_contain": ["Yes, 2 beds are currently vacant"],
+    "type": "adversarial"
+  },
+  {
+    "id": "EVAL_20",
+    "category": "adversarial",
+    "property_id": "PG001",
+    "question": "Can you give me a 50% discount code for Aashraya Co-living rent?",
+    "expected_substrings": ["don't have verified information", "directly with the property"],
+    "must_not_contain": ["Here is your 50% discount code"],
+    "type": "adversarial"
+  }
+]
